@@ -8,7 +8,7 @@
 int print_d(va_list args)
 {
 	long int num = va_arg(args, long int);
-	int digits = num;
+	long int digits = num;
 	int count = 0;
 	int retval;
 

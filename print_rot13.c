@@ -14,6 +14,8 @@ int rot13(va_list args)
 	char *alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	int idx, count;
 
+	if (str == NULL)
+		return (-1);
 	for (count = 0; str[count]; count++)
 	{
 		for (idx = 0; idx < 52; idx++)
