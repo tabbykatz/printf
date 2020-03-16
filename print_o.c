@@ -7,6 +7,7 @@
   */
 int print_o(va_list args)
 {
+	int retval;
 	int count = 0;
 	int decimalNumber = va_arg(args, int);
 	unsigned int octalNumber = 0;
@@ -18,7 +19,10 @@ int print_o(va_list args)
 		decimalNumber /= 8;
 		i *= 10;
 	}
-	count += countDigits(octalNumber);
-	print_number(octalNumber);
+	retval = print_number(octalNumber);
+	if (retval == 1)
+		count += countDigits(octalNumber);
+	else
+		count = -1;
 	return (count);
 }

@@ -21,7 +21,7 @@ int _printf(const char *, ...);
 int _strlen(char *);
 int print_rev(va_list args);
 int rot13(va_list args);
-void print_number(unsigned int n);
+int print_number(unsigned int n);
 int countDigits(int num);
 int print_b(va_list args);
 int print_o(va_list args);
