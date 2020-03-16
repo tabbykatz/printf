@@ -5,7 +5,7 @@
   *
   * Return: chars printed or -1
   */
-int print_u(va_list args);
+int print_u(va_list args)
 {
 	unsigned int num = va_arg(args, unsigned int);
 	int digits = num;
