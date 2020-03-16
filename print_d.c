@@ -14,7 +14,6 @@ int print_d(va_list args)
 	int count = 0;
 	int retval;
 
-	printf("%d\n", num);
 	if (num < 0)
 	{
 		retval = _putchar('-');
