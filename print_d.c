@@ -7,17 +7,28 @@
   */
 int print_d(va_list args)
 {
-	int num = va_arg(args, int);
+	long int num = va_arg(args, long int);
 	int digits = num;
 	int count = 0;
+	int retval;
 
 	if (num < 0)
 	{
-		_putchar('-');
+		retval = _putchar('-');
+		if (retval == -1)
+		{
+			count = -1;
+			return (count);
+		}
 		count += 1;
 		num = -num;
 	}
-	count += countDigits(digits);
-	print_number(num);
+	retval = print_number(num);
+	if (retval == 1)
+	{
+		count += countDigits(digits);
+	}
+	else
+		count = -1;
 	return (count);
 }

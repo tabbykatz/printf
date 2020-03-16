@@ -41,7 +41,5 @@ int print_rev(va_list args)
 		length--;
 		count++;
 	}
-	_putchar('\n');
-
 	return (count);
 }

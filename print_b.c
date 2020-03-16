@@ -8,6 +8,7 @@
   */
 int print_b(va_list args)
 {
+	int retval;
 	int count = 0;
 	unsigned int num = va_arg(args, unsigned int);
 	int binaryNum = 0;
@@ -21,7 +22,10 @@ int print_b(va_list args)
 		binaryNum = binaryNum + rem * temp;
 		temp = temp * 10;
 	}
-	count += countDigits(binaryNum);
-	print_number(binaryNum);
+	retval = print_number(binaryNum);
+	if (retval == 1)
+		count += countDigits(binaryNum);
+	else
+		count = -1;
 	return (count);
 }
