@@ -1,5 +1,12 @@
 #include "holberton.h"
 
+/**
+ * get_function - determine which print function to use
+ * @specifier: the character that identifies the type of the variable to print
+ *
+ * Return: pointer to the matching print function
+ */
+
 int (*get_function(const char *specifier))(va_list)
 {
 	int idx;
