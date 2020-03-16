@@ -14,7 +14,9 @@ int print_b(va_list args)
 	int binaryNum = 0;
 	int rem;
 	int temp = 1;
-
+	
+	if (num == 0)
+		retval = _putchar('0');
 	while (num)
 	{
 		rem = num % 2;
