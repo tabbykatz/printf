@@ -14,7 +14,7 @@ void print_upperHex(unsigned int num, int *count)
 
 	/* if num > 0xf, recursion */
 	if (num > 15)
-		print_lowerHex(num >> 4, count);
+		print_upperHex(num >> 4, count);
 
 	/* break out of recursion if _putchar fails */
 	if (*count == -1)
