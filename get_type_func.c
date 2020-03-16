@@ -18,7 +18,7 @@ int (*get_function(const char *specifier))(va_list)
 		{"i", print_d},
 		{"b", print_b},
 		{"o", print_o},
-		{"u", print_d},
+		{"u", print_u},
 		{"x", print_x},
 		{"X", print_X},
 		{"p", print_p},
