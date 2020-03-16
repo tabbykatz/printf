@@ -8,8 +8,12 @@ _printf \- a basic replica of the standard printf function
 .BI "int _printf(const char *" "format, ..." ");"
 
 .SH DESCRIPTION
+Write output to stdout using the format string. The format string is comprised of 0 or more directives and contains specifiers beginning with the character \(dq%\(dq. The specifier use the corresponding argument to print the variable.
 
-.SS Format of the format string
+.SH RETURN VALUE
+On success, \fB_printf\fR returns the number of bytes printed, excluding the null byte. On failure, returns -1.
+
+.SH SPECIFERS
 .TP
 d, i
 The int argument is printed in signed decimal notation
@@ -46,15 +50,37 @@ The \fIconst char *\fR argument is expected to be a pointer to a character array
 
 
 
-
-.SH RETURN VALUE
-
-
 .SH EXAMPLE
-To print 
+To print text mixed with a \fIname\fR string variable and an \fIage\fR integer variable:
+.PP
+.nf
+.RS
+#include "holberton.h"
+#include <string.h>
 
-.SH AUTHOR
+int main(int ac, char **av)
+{
+	int age;
+	char *name;
 
+	if (ac != 3)
+	   return (-1);
+
+	name = av[1];
+	age = atoi(av[2]);
+
+	_printf("Hello! My name is %s and I am %d years old.\n", name, age);
+
+	return (0);
+}
+.fi
+.PP
 
 .SH SEE ALSO
 .BR printf (3)
+
+.SH AUTHOR
+Cynthia Taylor, Tabitha O'Melay
+
+.SH BUGS
+Work in progress. There are bugs as of 3/16/20. Hopefully there won't be by the end of the day tomorrow.
