@@ -13,6 +13,7 @@ int print_d(va_list args)
 	int digits = num;
 	int count = 0;
 	int retval;
+	unsigned int unsign;
 
 	if (num < 0)
 	{
@@ -23,9 +24,16 @@ int print_d(va_list args)
 			return (count);
 		}
 		count += 1;
-		num = -num;
+		unsign = -num;
+
 	}
-	retval = print_number(num);
+	else
+	{
+		unsign = num;
+	}
+
+	retval = print_number(unsign);
+
 	if (retval == 1)
 	{
 		count += countDigits(digits);
