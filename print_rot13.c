@@ -13,23 +13,27 @@ int rot13(va_list args)
 	char *rot13 = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	char *alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	int idx, count;
+	char *encoded;
 
-	if (str == NULL)
+	encoded = malloc(sizeof(str));
+
+	if (!encoded || !str)
 		return (-1);
+
 	for (count = 0; str[count]; count++)
 	{
 		for (idx = 0; idx < 52; idx++)
 		{
 			if (str[count] == alphabet[idx])
 			{
-				str[count] = rot13[idx];
+				encoded[count] = rot13[idx];
 				break;
 			}
 		}
 	}
 
-	for (count = 0; str[count]; count++)
-		_putchar(str[count]);
+	for (count = 0; encoded[count]; count++)
+		_putchar(encoded[count]);
 
 	return (count);
 }
