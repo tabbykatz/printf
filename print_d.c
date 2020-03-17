@@ -8,9 +8,8 @@
   */
 int print_d(va_list args)
 {
-
 	int num = va_arg(args, int);
-	int digits = num;
+/*	int digits = num; */
 	int count = 0;
 	int retval;
 	unsigned int unsign;
@@ -20,8 +19,7 @@ int print_d(va_list args)
 		retval = _putchar('-');
 		if (retval == -1)
 		{
-			count = -1;
-			return (count);
+			return (-1);
 		}
 		count += 1;
 		unsign = -num;
@@ -36,7 +34,7 @@ int print_d(va_list args)
 
 	if (retval == 1)
 	{
-		count += countDigits(digits);
+		count += countDigits(unsign);
 	}
 	else
 		count = -1;
