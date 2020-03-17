@@ -30,14 +30,44 @@ int countDigits(long int num)
 {
 	int count = 0;
 
-	if (num > 0)
+	while (num > 0)
 	{
 		count++;
-		countDigits(num / 10);
+		num /= 10;
 	}
-	else
+	return (count);
+}
+/**
+* countOctal - count how many digits the number is
+* @num: the number
+*
+* Return: the count
+*/
+int countOctal(unsigned int num)
+{
+	int count = 0;
+
+	while (num > 0)
 	{
-		return (count);
+		count++;
+		num /= 8;
+	}
+	return (count);
+}
+/**
+* countBinary - count how many digits the number is
+* @num: the number
+*
+* Return: the count
+*/
+int countBinary(unsigned int num)
+{
+	int count = 0;
+
+	while (num > 0)
+	{
+		count++;
+		num /= 2;
 	}
 	return (count);
 }
