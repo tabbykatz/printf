@@ -5,10 +5,10 @@
   *
   * Return: void
   */
-int  print_number(unsigned long int n)
+int  print_number(unsigned int n)
 {
 	int retval;
-	unsigned long int num = n;
+	unsigned int num = n;
 
 	if (num / 10)
 		print_number(num / 10);
@@ -26,7 +26,7 @@ int  print_number(unsigned long int n)
 *
 * Return: the count
 */
-int countDigits(long int num)
+int countDigits(unsigned int num)
 {
 	int count = 0;
 

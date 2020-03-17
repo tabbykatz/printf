@@ -10,10 +10,10 @@ A rebuild of the standard `printf` function in C. Our project required a functio
 Holberton students rarely rely on the C standard library, instead building our own functions and headers as we learn. Here you will see a variety of our builds put to use to build a simple re-imagining of `printf`.
 
 ## The Beast that is `printf`
-It was daunting to approach a reinvention of `printf`. This is possibly the most refined function in C, with human hours spent on it thought to surpass a decade. 
+It was daunting to approach a reinvention of `printf`. This is possibly the most refined function in C, with human hours spent on it thought to surpass a decade.
 
 ## Format Specifiers
-Our team chose to add `%x` ,`%X`, `%b`, `%o`, `%u`, `%r`, `%R`, and `%p` formatting. We relied on the library we have been building at Holberton as well as new concepts gathered during this project. 
+Our team chose to add `%x` ,`%X`, `%b`, `%o`, `%u`, `%r`, `%R`, and `%p` formatting. We relied on the library we have been building at Holberton as well as new concepts gathered during this project.
 
 ### Supported Format Types
 
@@ -34,13 +34,13 @@ Our team chose to add `%x` ,`%X`, `%b`, `%o`, `%u`, `%r`, `%R`, and `%p` formatt
 | p | pointer |
 
 ## Deployment
-This project was released soon after COVID - 19 precautions were adopted at our Holberton campus, so Cynthia and I worked both remotely and in person in our private homes for the duration. We set up a [Trello](https://trello.com) board, divided tasks, and kept each other on the same page as we went. 
+This project was released soon after COVID - 19 precautions were adopted at our Holberton campus, so Cynthia and I worked both remotely and in person in our private homes for the duration. We set up a [Trello](https://trello.com) board, divided tasks, and kept each other on the same page as we went.
 
 ## Built With
 
 * [Ubuntu](https://ubuntu.com/)
 * [GitHub](https://github.com/)
-* [StackEdit](https://stackedit.io/) 
+* [StackEdit](https://stackedit.io/)
 
 # Project Requirements
 -   Allowed editors: `vi`, `vim`, `emacs`
