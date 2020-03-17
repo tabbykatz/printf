@@ -23,6 +23,8 @@ int print_rev(va_list args);
 int rot13(va_list args);
 int print_number(unsigned long int n);
 int countDigits(long int num);
+int countOctal(unsigned int num);
+int countBinary(unsigned int num);
 int print_b(va_list args);
 int print_o(va_list args);
 int print_d(va_list args);
