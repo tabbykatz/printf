@@ -8,26 +8,23 @@
   */
 int print_b(va_list args)
 {
-	int retval;
 	int count = 0;
-	unsigned int num = va_arg(args, unsigned int);
-	int binaryNum = 0;
-	int rem;
-	int temp = 1;
+	unsigned int decimalNumber = va_arg(args, unsigned int);
+	int i = 1;
+	char *string;
 
-	if (num == 0)
-		retval = _putchar('0');
-	while (num)
+	count += countBinary(decimalNumber);
+	string = malloc(sizeof(char) * (count + 1));
+		if (string == NULL)
+			return (-1);
+	for (i = 1; i < count + 1; i++)
 	{
-		rem = num % 2;
-		num = num / 2;
-		binaryNum = binaryNum + rem * temp;
-		temp = temp * 10;
+		string[count - i] = decimalNumber % 2;
+		decimalNumber = decimalNumber / 2;
 	}
-	retval = print_number(binaryNum);
-	if (retval == 1)
-		count += countDigits(binaryNum);
-	else
-		count = -1;
+	for (i = 0; i < count; i++)
+	{
+		_putchar(string[i] + '0');
+	}
 	return (count);
 }
