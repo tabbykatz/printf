@@ -14,7 +14,7 @@ int print_c(va_list args)
 
 	retval = _putchar(C);
 	if (retval == -1)
-		return (-1)
+		return (-1);
 	count++;
 
 	return (count);
