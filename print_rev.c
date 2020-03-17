@@ -1,23 +1,6 @@
 #include "holberton.h"
 
 /**
- * _strlen - count the number of characters in a string
- * @str: pointer to a string
- *
- * Return: number of characters in the string
- */
-
-int _strlen(char *str)
-{
-	int count = 0;
-
-	while (*(str + count))
-		count++;
-
-	return (count);
-}
-
-/**
  * print_rev - print a string in reverse
  * @args: va_list with the string to print as the next element
  *
