@@ -30,10 +30,14 @@ int rot13(va_list args)
 				break;
 			}
 		}
+		if (str[count] != alphabet[idx])
+			encoded[count] = str[count];
 	}
 
 	for (count = 0; encoded[count]; count++)
 		_putchar(encoded[count]);
+
+	free(encoded);
 
 	return (count);
 }
