@@ -10,7 +10,7 @@ int print_o(va_list args)
 {
 	int count = 0;
 	unsigned int decimalNumber = va_arg(args, unsigned int);
-	int i = 1;
+	int i = 1, retval;
 	int remainder;
 	char *string;
 
@@ -26,7 +26,15 @@ int print_o(va_list args)
 	}
 	for (i = 0; i < count; i++)
 	{
-		_putchar(string[i]);
+		retval = _putchar(string[i]);
+
+		if (retval == -1)
+		{
+			free(string);
+			return (-1);
+		}
 	}
+
+	free(string);
 	return (count);
 }
