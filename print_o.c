@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
   *  print_o - prints octal numbers from decimal
   * @args: the number
@@ -7,22 +8,25 @@
   */
 int print_o(va_list args)
 {
-	int retval;
 	int count = 0;
-	int decimalNumber = va_arg(args, int);
-	unsigned int octalNumber = 0;
+	unsigned int decimalNumber = va_arg(args, unsigned int);
 	int i = 1;
+	int remainder;
+	char *string;
 
-	while (decimalNumber != 0)
+	count += countOctal(decimalNumber);
+	string = malloc(sizeof(char) * (count + 1));
+		if (string == NULL)
+			return (-1);
+	for (i = 1; i < count + 1; i++)
 	{
-		octalNumber += (decimalNumber % 8) * i;
-		decimalNumber /= 8;
-		i *= 10;
+		remainder = decimalNumber % 8;
+		decimalNumber = decimalNumber / 8;
+		string[count - i] = remainder + '0';
 	}
-	retval = print_number(octalNumber);
-	if (retval == 1)
-		count += countDigits(octalNumber);
-	else
-		count = -1;
+	for (i = 0; i < count; i++)
+	{
+		_putchar(string[i]);
+	}
 	return (count);
 }
