@@ -11,7 +11,7 @@ int print_o(va_list args)
 	int count = 0;
 	unsigned int decimalNumber = va_arg(args, unsigned int);
 	int i = 1;
-	int remainder;
+	unsigned int remainder;
 	char *string;
 
 	count += countOctal(decimalNumber);
