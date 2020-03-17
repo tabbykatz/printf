@@ -10,13 +10,14 @@ int print_b(va_list args)
 {
 	int count = 0;
 	unsigned int decimalNumber = va_arg(args, unsigned int);
-	int i = 1;
+	int i = 1, retval;
 	char *string;
 
 	count += countBinary(decimalNumber);
 	string = malloc(sizeof(char) * (count + 1));
-		if (string == NULL)
-			return (-1);
+
+	if (string == NULL)
+		return (-1);
 	for (i = 1; i < count + 1; i++)
 	{
 		string[count - i] = decimalNumber % 2;
@@ -24,7 +25,15 @@ int print_b(va_list args)
 	}
 	for (i = 0; i < count; i++)
 	{
-		_putchar(string[i] + '0');
+		retval = _putchar(string[i] + '0');
+
+		if (retval == -1)
+		{
+			free(string);
+			return (-1);
+		}
 	}
+
+	free(string);
 	return (count);
 }
