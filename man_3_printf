@@ -47,7 +47,9 @@ The \fIconst char *\fR argument is expected to be a pointer to a character array
 .TP
 R
 The \fIconst char *\fR argument is expected to be a pointer to a character array. Characters are encoded into ROT13 and written up to, but not including, the terminating null byte.
-
+.TP
+F
+Regardless of what is passed to the function, this specifier only prints an expletive.
 
 
 .SH EXAMPLE
