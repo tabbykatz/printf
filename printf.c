@@ -17,13 +17,13 @@ int _printf(const char *format, ...)
 
 	while (*format)
 	{
-		if (*format == '%' && *(format + 1) == NULL)
-			return (-1);
 		if (*format == '%' && *(format + 1) != '%')
 		{
 			format++;
 			function = get_function(format);
-			if (function == NULL)
+			if (*(format) == '\0')
+				return (-1);
+			else if (function == NULL)
 			{
 				_putchar(*(format - 1));
 				_putchar(*format);
