@@ -13,6 +13,15 @@ int print_b(va_list args)
 	int i = 1, retval;
 	char *string;
 
+	if (decimalNumber < 1)
+	{
+		for (i = 0; i < 2; i++)
+		{
+			_putchar(0 + '0');
+		}
+		return (2);
+	}
+
 	count += countBinary(decimalNumber);
 	string = malloc(sizeof(char) * (count + 1));
 
