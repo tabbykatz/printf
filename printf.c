@@ -21,7 +21,14 @@ int _printf(const char *format, ...)
 		{
 			format++;
 			function = get_function(format);
-			count += function(args);
+			if (function == NULL)
+			{
+				_putchar(*(format - 1));
+				_putchar(*format);
+				count += 2;
+			}
+			else
+				count += function(args);
 		}
 		else if (*format == '%' && *(format + 1) == '%')
 		{

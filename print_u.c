@@ -8,7 +8,7 @@
 int print_u(va_list args)
 {
 	unsigned int num = va_arg(args, unsigned int);
-	int digits = num;
+	unsigned int digits = num;
 	int count = 0;
 	int retval;
 
