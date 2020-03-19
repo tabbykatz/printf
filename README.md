@@ -35,6 +35,17 @@ Our team chose to add `%x` ,`%X`, `%b`, `%o`, `%u`, `%r`, `%R`, and `%p` formatt
 | p | pointer |
 | F | expletive |
 
+###Examples
+
+Character: printf("%c", 'A'); Output:: A
+
+String: printf("%s", 'This is a string.'); Output: This is a string.
+
+Integer: printf("%i", 5); Output: 5
+
+Expletive: printf("%F", anything); Output: FUCK
+
+
 ## Deployment
 This project was released soon after COVID - 19 precautions were adopted at our Holberton campus, so Cynthia and I worked both remotely and in person in our private homes for the duration. We set up a [Trello](https://trello.com) board, divided tasks, and kept each other on the same page as we went.
 

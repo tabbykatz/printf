@@ -25,6 +25,11 @@ int print_d(va_list args)
 		unsign = -num;
 
 	}
+	if (num == 0)
+	{
+		_putchar('0')
+		return (1);
+	}
 	else
 	{
 		unsign = num;
