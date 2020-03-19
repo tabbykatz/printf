@@ -12,6 +12,11 @@ int print_u(va_list args)
 	int count = 0;
 	int retval;
 
+	if (num < 1)
+	{
+		_putchar('0');
+		return (1);
+	}
 	retval = print_number(num);
 	if (retval == 1)
 	{

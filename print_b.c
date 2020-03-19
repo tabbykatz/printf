@@ -15,11 +15,8 @@ int print_b(va_list args)
 
 	if (decimalNumber < 1)
 	{
-		for (i = 0; i < 2; i++)
-		{
-			_putchar(0 + '0');
-		}
-		return (2);
+		_putchar(0 + '0');
+		return (1);
 	}
 
 	count += countBinary(decimalNumber);
