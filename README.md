@@ -35,7 +35,7 @@ Our team chose to add `%x` ,`%X`, `%b`, `%o`, `%u`, `%r`, `%R`, and `%p` formatt
 | p | pointer |
 | F | expletive |
 
-###Examples
+### Examples
 
 Character: printf("%c", 'A'); Output:: A
 
