@@ -25,10 +25,13 @@ int print_d(va_list args)
 		unsign = -num;
 
 	}
-	if (num == 0)
+	else if (num == 0)
 	{
-		_putchar('0');
-		return (1);
+		retval = _putchar('0');
+		if (retval == 1)
+			return (1);
+		else
+			return (-1);
 	}
 	else
 	{
